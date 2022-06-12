@@ -1,6 +1,7 @@
 import 'package:editable/editable.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:superadmin_panel/utils/variables.dart';
 
 import '../controllers/create_database_controller.dart';
 
@@ -14,8 +15,9 @@ class CreatedDataBase extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Editable(
-        columns: cdc.newColumnNames,
-        rows: cdc.rows_values,
+        columnRatio: 0.1,
+        columns: Variables.columnNames,
+        rows: Variables.rowValues,
         showCreateButton: true,
         tdStyle: const TextStyle(fontSize: 20),
         showSaveIcon: true,
